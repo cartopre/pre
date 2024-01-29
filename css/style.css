@@ -1,0 +1,343 @@
+:root {
+	--bleu-anct:#293173;
+	--bleu-second:#5770be;
+	--jaune-anct:#ffe800;
+	--color-programme:rgb(242,203,19);
+	--color-programme-second:rgb(154,61,119);
+}
+
+
+body {
+	padding: 0;
+	margin:0;
+}
+
+
+html, body, #mapid {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	font-family: 'Marianne-regular', Arial, Helvetica, sans-serif !important;
+	font-size: 0.9em;
+	color:#161616
+}
+
+#mapid {
+	background: rgb(245, 245, 245)
+}
+
+/* -------------------------------------------------------------------------- */
+/* 								SCREEN LOADING					   	 		  */													
+/* -------------------------------------------------------------------------- */
+
+
+#loading {
+	background-color: rgba(0,0,0,.75);
+	color:white;
+	padding:100px;
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 10000 !important;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 								LEAFLET SIDEBAR					   	 		  */													
+/* -------------------------------------------------------------------------- */
+
+#sidebar {
+	position: absolute;
+}
+
+/* longueur */
+@media (min-width: 1200px) {
+	.leaflet-sidebar, .leaflet-sidebar-header {
+		width: 550px;
+		max-width: 550px;
+	}
+}
+
+/* header panneau avec titre carte */
+.leaflet-sidebar-header {
+	background: none;
+	font-family: 'Marianne-Bold';
+	text-transform: uppercase;
+	color:var(--bleu-anct);
+	font-size: 14px;
+	margin:0px 0px 15px 5px;
+	height: auto;
+	z-index: 0;
+}
+
+.leaflet-sidebar-close {
+	color:black;
+	z-index: 5000 !important;
+}
+
+
+/* sidebar */
+.leaflet-sidebar-tabs {
+	background: rgb(154,61,119);
+	/* background: linear-gradient(180deg, var(--bleu-anct) 0%, rgb(226, 224, 245) 100%);  */
+	box-shadow: 2px 0px 2px 0px #656565;
+}
+
+/* boutons sidebar */
+.leaflet-sidebar-tabs > ul > li {
+	color:white;
+}
+
+.leaflet-sidebar-tabs > ul > li.active,
+.leaflet-sidebar-tabs > ul > li.active:hover {
+	background-color: rgb(249, 249, 251);
+	color:var(--bleu-anct);
+	border-left: solid 3px var(--color-programme-second);	 
+}
+
+.leaflet-sidebar-tabs > ul > li:hover {
+	background-color: rgba(0,0,0,.25);
+	color:white;
+	transition: .2s
+} 
+
+.leaflet-sidebar-tabs > ul > li:hover {
+	background-color: rgba(0,0,0,.25);
+	color:white;
+	transition: .2s
+} 
+
+/* nom onglet au survol d'un bouton */
+.tab-name {
+	position: absolute;
+	display: none;
+	z-index: 10000;
+	left: 50px;
+	background: rgba(0,0,0,.8) !important;
+	font-family: 'Marianne-Bold';
+	font-size: .9rem;
+	text-transform: uppercase;
+	text-align: center;
+	color:white !important;
+	width: 100px;
+	border-radius: 3px;
+}
+
+.leaflet-sidebar-tabs ul li a:hover .tab-name{
+	display: inline-block;
+ }
+ 
+ .leaflet-sidebar-tabs ul li .tab-name:before{
+   content: "";
+   position: absolute;
+   top: 50%;
+   right: 100%; /* To the left of the tooltip */
+   margin-top: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: transparent rgba(0,0,0,.8) transparent transparent;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* 									LEAFLET MAP						 		  */
+/* -------------------------------------------------------------------------- */
+
+/* chef lieux */
+.leaflet-marker-pane {
+	display: none;
+	left:-10px;
+	opacity: 0.75;
+	font-family: 'Abel-Regular';
+	font-size: .9em;
+	font-weight: 600;
+	border-color:white;
+	justify-content: center;
+	text-align: center;
+	text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;
+  }
+  
+.leaflet-tooltip-top:before, 
+.leaflet-tooltip-bottom:before {
+	border: none !important;
+}
+
+.leaflet-tooltip {
+	text-align: center;
+	border:none !important;
+	background-color: var(--color-programme-second) !important;
+	color: white !important;
+	font-size:1em;
+	font-family: 'abel-regular';
+	font-weight:900;
+}
+
+.leaflet-tooltip-clicked {
+	background-color: var(--color-programme-second)!important;
+}
+
+.leaflet-tooltip-info {
+	font-weight: normal !important;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/* 									INTRO							 		  */
+/* -------------------------------------------------------------------------- */
+
+#logo-programme {
+	width: 100%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 									SEARCH BAR						 		  */
+/* -------------------------------------------------------------------------- */
+
+
+#search-bar-container {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.input-icon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 10;
+	font-size: 1.15em;
+	color:var(--bleu-anct);
+}
+
+.search-field {
+	text-indent: 20px;
+	border-top-left-radius: 3px !important;
+	border-bottom-left-radius: 3px !important;
+}
+
+ul {
+	list-style: none;	
+	display: inline-block;
+	vertical-align: top;
+	z-index: 10;
+}
+
+li {
+	padding-bottom: 5px;
+}
+
+.list-group {
+	width: 100%;
+	position: absolute;
+}
+
+.list-group-item {
+	background-color: white;
+	cursor: pointer;
+	list-style: none;
+	transition: .05s;
+	box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.list-group-item.is-active {
+	background-color: var(--bleu-anct);
+	font-family: 'Marianne-Bold';
+	color:white;
+	display: block;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 								 	CARDS						   	 		  */													
+/* -------------------------------------------------------------------------- */
+
+
+
+.card {
+	margin-bottom: 20px;
+	margin-top: 20px;
+	background-color: white;
+}
+
+
+.card-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+	background-color:var(--color-programme-second);
+	font-family: 'Marianne-Bold';
+	font-size: 1.6em;
+	text-transform: uppercase;
+	/* border-bottom: 2px solid var(--color-programme-second); */
+}
+
+.mini-card {
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+.mini-card:hover {
+	transform: scale(1.01);
+	box-shadow: 0 10px 10px rgba(0,0,0,.08), 0 4px 8px rgba(0,0,0,.1);
+}
+
+.card-body ul {
+	padding-left: 9px;
+	margin-bottom: 7px;
+}
+
+.subtitle {
+	color:gray;
+	font-size: .95em;
+}
+
+.element {
+	font-family: 'Marianne-Bold';
+	font-size: 1.3em;
+}
+
+/* bouton retour */
+
+#back-btn {
+	background-color: var(--color-programme);
+	border: solid 1px var(--color-programme);
+	color:white;
+	font-family: 'Marianne-Bold';
+	border-radius: 0;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+#back-btn:hover {
+	background-color: white;
+	color:var(--bleu-anct);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 								 SCROLL BAR						   	 		  */													
+/* -------------------------------------------------------------------------- */
+
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888; 
+	border-radius: 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
