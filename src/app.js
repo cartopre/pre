@@ -212,18 +212,19 @@ const IntroTemplate = {
     <div>
         <div>
         <h5><b>
-            Le Programme de réussite éducative (PRE)     
-            </b>
-            </h5>
-            <p>
-            !!! Texte à définir !!!
-            </p>
+        Le Programme de réussite éducative (PRE)</b>
+        </h5>
+            <p>Depuis 2005, le Programme de Réussite Educative est un dispositif central de la politique de la ville. Il accompagne dès les premières années de l’école maternelle et jusqu’au terme de leur scolarité, des enfants et des adolescents présentant des signes de fragilité. Le PRE prend en compte la globalité de leur environnement et de leurs difficultés, en maintenant le lien avec les familles, sans se substituer aux différents dispositifs de droit commun. La question du repérage individualisé et du parcours personnalisé et global reste également la spécificité de ce dispositif.</p>
+            <p>Ainsi, chaque année, plus de 500 programmes de réussite éducative couvrent le territoire et c’est 80 000 jeunes qui en sont les bénéficiaires grâce à un accompagnement personnalisé décidé en amont par une équipe pluridisciplinaire au service du bien-être et de la réussite éducative de chaque jeune.</p>
+            <p>Ces équipes accompagnent via actions spécifiques (individuelles ou collectives) dédiées aux jeunes et à leurs familles (soutien à la parentalité, soutien scolaire, accès aux soins, accès à la culture...) tout en répondant à des besoins insuffisamment couverts sur le territoire concerné.</p>
+            <p>La carte interactive des programmes de réussite éducative permet de rendre compte de l’ancrage local du PRE sur tout le territoire national et son implantation au niveau des quartiers politiques de la ville. L’ampleur de son implantation est le premier indicateur d’une appropriation acquise par les territoires. Immédiatement mobilisable, le PRE est un avant tout un dispositif de grande proximité pour les familles.</p>
+            <p>Le PRE est un dispositif qui rend compte d’une grande proximité.</p>
+            <p>Cette carte s’adresse aussi bien aux professionnels souhaitant mieux connaître le réseau des PRE, les différents types de portage et de périmètre ainsi qu’au grand public afin de mieux connaître la politique de la ville en matière de réussite éducative.</p>
         <h5><b>
         Nous contacter</b>
         </h5>
-        <p>Ecrivez-nous à <a href='mailto:adefinir@test.fr'>!!!adefinir@test.fr</a>
-        </p>
-
+            <p>Le Pôle Dispositifs d’Accompagnement Educatifs du Programme Education de l’ANCT a réalisé cette carte selon une base de données qui peut évoluer au regard des changements internes des équipes PRE de chaque territoire.</p>
+            <p>Si vous constatez des erreurs (adresses mails, poste de coordonnateurs), vous pouvez nous écrire à<a href='mailto:pole-dae@anct.gouv.fr'>pole-dae@anct.gouv.fr</a></p>
         </div>
     </div>`
 };
