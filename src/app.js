@@ -224,7 +224,7 @@ const IntroTemplate = {
         Nous contacter</b>
         </h5>
             <p>Le Pôle Dispositifs d’Accompagnement Educatifs du Programme Education de l’ANCT a réalisé cette carte selon une base de données qui peut évoluer au regard des changements internes des équipes PRE de chaque territoire.</p>
-            <p>Si vous constatez des erreurs (adresses mails, poste de coordonnateurs), vous pouvez nous écrire à<a href='mailto:pole-dae@anct.gouv.fr'>pole-dae@anct.gouv.fr</a></p>
+            <p>Si vous constatez des erreurs (adresses mails, poste de coordonnateurs), vous pouvez nous écrire à <a href='mailto:pole-dae@anct.gouv.fr'>pole-dae@anct.gouv.fr</a></p>
         </div>
     </div>`
 };
@@ -542,7 +542,7 @@ const LeafletMap = {
                     dep:{
                         interactive:false,
                         style: {
-                            fillColor:"#bcedf5",
+                            fillColor:"#9A3D77",
                             fillOpacity:1,
                             color:"white",
                             weight:0.5,
@@ -577,7 +577,7 @@ const LeafletMap = {
                     }
                 },
                 categories:{
-                    colors:['#9A3D77'],
+                    colors:['#bcedf5'],
                     values:["pre"],
                     labels:["Programme de réussite éducative"],
                 },
@@ -897,7 +897,7 @@ const LeafletMap = {
 
             const propSymbols = new L.GeoJSON(geom, {
                 style: {
-                    fillColor:'#9A3D77',
+                    fillColor:'#bcedf5',
                     fillOpacity:.5,
                     weight:2,
                     color:'white'
